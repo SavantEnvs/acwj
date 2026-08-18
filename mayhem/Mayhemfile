@@ -1,0 +1,8 @@
+project: savantenvs/acwj
+target: parser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar   # accumulation — REQUIRED
+  - file://mayhem/parser/testsuite                                        # per-target starter seeds (relative!)
+cmds:
+  - cmd: /mayhem/parser
+    libfuzzer: true
